@@ -2,25 +2,39 @@
 
 ## Read this article and more on [Marc The Code](https://www.marcthecode.com)
 
-It's Friday afternoon.
+It's Friday afternoon. 
+
 You just deployed a new feature to your Salesforce Org
+
 Something is clearly wrong with it.
-Your users are complaining, your boss is calling you in panic.
+
+Your users are complaining, your boss is calling you in panic. 
+
 You have to fix it NOW.
-You open the debug log, it's a simple mistake.
-You fix the error in your Apex class in a few seconds.
-You prepare the deployment package in less than 5 minutes. Awesome.
-You wait for that package validation.
-[60 minutes later], your package is ready to go.
+
+You open the debug log, it's a simple mistake. 
+
+You fix the error in your Apex class in just a few minutes. 
+
+You prepare the deployment package.
+
+You wait for that package validation. 
+
+[60 minutes later], your package is ready to go. 
+
 Clearly not the Friday you wanted.
 
-Sounds familiar? I know it happened to me.
+
+Sounds familiar? I know it happened to me more than once.
+
 Package validation is sometimes longer than actually fixing the problem and while we have no control over components validation, we do have some sort of control over the unit testing part of it.
 
 ## Apex Testing
 
 We do our best to cover all possible edge cases with a complete set of unit tests, but mistakes happen.
+
 The problem is the more tests we add, the longer that package validation process takes to run. How can we make it go faster while maintaining that coverage and safety that a good set of tests provide?
+
 My approach is to prevent as many database operations as possible in your test classes.
 
 ### Step 1 - Remove Logic from your Triggers
