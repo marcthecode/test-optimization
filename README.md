@@ -39,24 +39,33 @@ By isolating your queries from your business logic, you make your query logic re
 
 ### Before
 
-Test Execution Time  705 ms
-Test Execution Time  660 ms
-Test Execution Time  535 ms
-Test Execution Time  593 ms
+-Test Execution Time  705 ms
+
+-Test Execution Time  660 ms
+
+-*Test Execution Time  535 ms*
+
+-Test Execution Time  593 ms
 
 ### After (without insertion)
 
-Test Execution Time  73 ms
-Test Execution Time  43 ms
-Test Execution Time  28 ms
-Test Execution Time  45 ms
+-Test Execution Time  73 ms
+
+-*Test Execution Time  43 ms*
+
+-Test Execution Time  28 ms
+
+-Test Execution Time  45 ms
 
 ### After (with insertion)
 
-Test Execution Time  700 ms
-Test Execution Time  497 ms
-Test Execution Time  647 ms
-Test Execution Time  551 ms
+-Test Execution Time  700 ms
+
+-*Test Execution Time  497 ms*
+
+-Test Execution Time  647 ms
+
+-Test Execution Time  551 ms
 
 The test execution time when keeping everything in memory is at least 10 times faster, and the changes required to make it possible in tests has no significant hit on performance even when performing database operations.
 
